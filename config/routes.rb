@@ -3,6 +3,7 @@ ExploringStripe::Application.routes.draw do
   root :to => "pages#home"
   match '/contact', to: 'pages#contact'
   match '/users', to: 'users#index'
+  match '/signup', to: 'users#new'
 
   get "pages/contact"
 
