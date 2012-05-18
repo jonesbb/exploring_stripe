@@ -1,4 +1,11 @@
 ExploringStripe::Application.routes.draw do
+
+  root :to => "pages#home"
+  match '/contact', to: 'pages#contact'
+  match '/users', to: 'users#index'
+
+  get "pages/contact"
+
   resources :users
 
   # The priority is based upon order of creation:
