@@ -1,13 +1,12 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :name
+  attr_accessible :email, :name, :stripe_card_token
   
   attr_accessor :stripe_card_token
   
   def save_with_payment
     if valid?
       customer = Stripe::Charge.create(amount: 50, currency: "usd", card: stripe_card_token, description: email)
-      RAILS_DEFAULT_LOGGER.debug @customer
-      self.stripe_customer_token = customer.id
+      #self.stripe_customer_token = customer.id
       save!
     end
   rescue Stripe::InvalidRequestError => e

@@ -37,13 +37,11 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  # POST /users
-  # POST /users.json
   def create
     @user = User.new(params[:user])
 
       if @user.save_with_payment
-        redirect_to @user, notice => "User was successfully created."
+        redirect_to @user, notice: 'Thank you for your purchase!'
       else
         render :new
       end
