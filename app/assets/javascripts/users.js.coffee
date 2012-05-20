@@ -26,9 +26,12 @@ user =
   
   handleStripeResponse: (status, response) ->
     if status == 200
-      $('#user_stripe_card_token').val(response.id)
-      $('#new_user')[0].submit()
+       alert(response.id)
+
+#      $('#user_stripe_card_token').val(response.id)
+#      $('#new_user')[0].submit()
     else
-      $('#stripe_error').text(response.error.message)
-      # disable the submit if get an error in CC input
-      $('input[type=submit]').attr('disabled', false)
+      alert(response.error.message)
+#      $('#stripe_error').text(response.error.message)
+#      # disable the submit if get an error in CC input
+#      $('input[type=submit]').attr('disabled', false)
