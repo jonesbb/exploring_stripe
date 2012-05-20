@@ -9,8 +9,11 @@ user =
   setupForm: ->
     $('#new_user').submit ->
       $('input[type=submit]').attr('disabled', true)
-      user.processCard()
-      false
+      if $('#card_number').length
+        user.processCard()
+        false
+      else
+        true
 
   
   processCard: ->
