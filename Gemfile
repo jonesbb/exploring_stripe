@@ -3,9 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.1.1'
 gem 'rack', '1.3.3'
 
-#group :development do
 gem 'sqlite3'
-#end
 
 gem 'heroku'
 gem 'stripe'
