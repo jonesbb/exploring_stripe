@@ -22,8 +22,6 @@ user =
       cvc: $('#card_code').val()
       expMonth: $('#card_month').val()
       expYear: $('#card_year').val()
-      alert(card)
-
     Stripe.createToken(card, user.handleStripeResponse)
   
   handleStripeResponse: (status, response) ->
