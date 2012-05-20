@@ -55,9 +55,6 @@ module ExploringStripe
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-    
-    # add /config to autoload path
-    #config.autoload_paths = %W(#{config.root}/config)
 
   end
 end
