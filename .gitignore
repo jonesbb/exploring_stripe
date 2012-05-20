@@ -8,7 +8,7 @@
 /.bundle
 
 # Ignore the stripe API key info
-/config/initializers/stripe.rb
+/config/initializers/Stripe.rb
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
