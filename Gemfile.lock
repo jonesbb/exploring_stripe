@@ -146,5 +146,6 @@ DEPENDENCIES
   sass-rails (= 3.1.4)
   sqlite3
   stripe
+  therubyracer
   twitter-bootstrap-rails
   uglifier (= 1.0.3)
